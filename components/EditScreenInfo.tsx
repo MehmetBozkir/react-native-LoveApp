@@ -1,45 +1,43 @@
-import React from 'react';
-import { StyleSheet } from 'react-native';
+import React from "react";
+import { StyleSheet } from "react-native";
+import { FontAwesome } from "@expo/vector-icons";
+import { ExternalLink } from "./ExternalLink";
+import { MonoText } from "./StyledText";
+import { View } from "./Themed";
 
-import { ExternalLink } from './ExternalLink';
-import { MonoText } from './StyledText';
-import { Text, View } from './Themed';
-
-import Colors from '@/constants/Colors';
-
-export default function EditScreenInfo({ path }: { path: string }) {
+export default function EditScreenInfo() {
   return (
     <View>
       <View style={styles.getStartedContainer}>
-        <Text
-          style={styles.getStartedText}
+        <MonoText
+          style={styles.getStartedText2}
           lightColor="rgba(0,0,0,0.8)"
-          darkColor="rgba(255,255,255,0.8)">
-          Open up the code for this screen:
-        </Text>
-
-        <View
-          style={[styles.codeHighlightContainer, styles.homeScreenFilename]}
-          darkColor="rgba(255,255,255,0.05)"
-          lightColor="rgba(0,0,0,0.05)">
-          <MonoText>{path}</MonoText>
-        </View>
-
-        <Text
-          style={styles.getStartedText}
+          darkColor="rgba(255,255,255,0.8)"
+        >
+          Hello, I'm Mehmet Salih Bozkir.
+        </MonoText>
+        <MonoText
+          style={styles.getStartedText2}
           lightColor="rgba(0,0,0,0.8)"
-          darkColor="rgba(255,255,255,0.8)">
-          Change any of the text, save the file, and your app will automatically update.
-        </Text>
+          darkColor="rgba(255,255,255,0.8)"
+        >
+          This is my first mobile project so I need your help.
+        </MonoText>
+        <MonoText
+          style={styles.getStartedText2}
+          lightColor="rgba(0,0,0,0.8)"
+          darkColor="rgba(255,255,255,0.8)"
+        >
+          I would be grateful if you comment on the application.
+        </MonoText>
       </View>
 
       <View style={styles.helpContainer}>
-        <ExternalLink
-          style={styles.helpLink}
-          href="https://docs.expo.io/get-started/create-a-new-app/#opening-the-app-on-your-phonetablet">
-          <Text style={styles.helpLinkText} lightColor={Colors.light.tint}>
-            Tap here if your app doesn't automatically update after making changes
-          </Text>
+        <ExternalLink href="https://github.com/MehmetBozkir">
+          <FontAwesome size={36} name="github" color="white"/>
+        </ExternalLink>
+        <ExternalLink href="https://www.linkedin.com/in/mehmet-salih-bozk%C4%B1r/">
+          <FontAwesome size={36} name="linkedin-square" color="white" />
         </ExternalLink>
       </View>
     </View>
@@ -48,30 +46,36 @@ export default function EditScreenInfo({ path }: { path: string }) {
 
 const styles = StyleSheet.create({
   getStartedContainer: {
-    alignItems: 'center',
+    alignItems: "center",
     marginHorizontal: 50,
   },
   homeScreenFilename: {
     marginVertical: 7,
   },
-  codeHighlightContainer: {
-    borderRadius: 3,
-    paddingHorizontal: 4,
-  },
   getStartedText: {
     fontSize: 17,
     lineHeight: 24,
-    textAlign: 'center',
+    textAlign: "center",
+    marginTop: 15,
+  },
+  getStartedText2: {
+    fontSize: 14,
+    lineHeight: 24,
+    textAlign: "center",
+    marginTop: 15,
   },
   helpContainer: {
     marginTop: 15,
     marginHorizontal: 20,
-    alignItems: 'center',
+    marginRight: 20,
+    alignItems: "center",
+    flexDirection: "row",
+    justifyContent: "center",
   },
   helpLink: {
     paddingVertical: 15,
   },
   helpLinkText: {
-    textAlign: 'center',
+    textAlign: "center",
   },
 });
