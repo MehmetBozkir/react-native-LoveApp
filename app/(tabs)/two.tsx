@@ -85,7 +85,7 @@ export default function TabTwoScreen() {
           <StyledText className="text-2xl font-bold mb-6">
             how much he loves you?
           </StyledText>
-          <Button icon="all-inclusive" mode="contained" onPress={handleButtonClick}>
+          <Button icon="all-inclusive" mode="contained" onPress={handleButtonClick} disabled={warningMessage}>
             FIND OUT
           </Button>
           <View style={styles.contentView}>

@@ -34,10 +34,10 @@ export default function EditScreenInfo() {
 
       <View style={styles.helpContainer}>
         <ExternalLink href="https://github.com/MehmetBozkir">
-          <FontAwesome size={36} name="github" color="white"/>
+          <FontAwesome size={60} name="github" color="blue"/>
         </ExternalLink>
         <ExternalLink href="https://www.linkedin.com/in/mehmet-salih-bozk%C4%B1r/">
-          <FontAwesome size={36} name="linkedin-square" color="white" />
+          <FontAwesome size={60} name="linkedin-square" color="blue"/>
         </ExternalLink>
       </View>
     </View>
@@ -71,6 +71,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     justifyContent: "center",
+    gap: 20,
   },
   helpLink: {
     paddingVertical: 15,
